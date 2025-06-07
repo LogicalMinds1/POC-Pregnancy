@@ -12,6 +12,8 @@ import UploadFile from "./src/Routes/up.js"
 import dotenv from "dotenv"
 dotenv.config();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const app = express();
 const PORT =  process.env.PORT || 8000;
