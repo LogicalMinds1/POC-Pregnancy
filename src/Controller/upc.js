@@ -1,7 +1,7 @@
 import fs from "fs";
 import axios from "axios";
 import Tesseract from "tesseract.js";
-import FileRecord from "../Model/uploadefileModel.js";
+import FileRecord from "../Model/upm.js";
 import pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
 import { OpenAI } from "openai";
 

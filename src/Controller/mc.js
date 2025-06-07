@@ -1,4 +1,4 @@
-import Mother from "../Model/motherModel.js";
+import Mother from "../Model/mm.js";
 import bcrypt from "bcrypt";
 import { JwtToken } from "../Utils/jwtToken.js";
 
