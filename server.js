@@ -3,12 +3,12 @@ import dotenv from 'dotenv';
 import connectDB from './src/db.js';
 import cors from 'cors';
 
-import MotherId from "./routes/motherRoutes.js"
-import { verifyToken } from "./Middleware/authMiddleware.js";
+import MotherId from "./src/Routes/MotherRoutes.js"
+import { verifyToken } from "./src/Middleware/authMiddleware.js";
 
-import PregnancyRecord from './routes/pregnancyRoutes.js';
-import Chat from "./routes/chatbot.js"
-import UploadFile from "./routes/uploadefileRoutes.js"
+import PregnancyRecord from './src/Routes/pregnancyRoutes.js';
+import Chat from "./src/Routes/Chatbot.js"
+import UploadFile from "./src/Routes/UploadefileRoutes.js"
 
 const app = express();
 const PORT =  process.env.PORT || 9000;
@@ -31,39 +31,3 @@ app.listen(PORT, async () => {
     await connectDB();
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-
-
-// import express from 'express';
-// import dotenv from 'dotenv';
-// import connectDB from './src/config/db.js';
-// import cors from 'cors';
-
-// import MotherId from "./src/Routes/motherRoutes.js";
-// import { verifyToken } from "./src/Middleware/authMiddleware.js";
-
-// import PregnancyRecord from './src/Controller/pregnancyController.js';
-// import Chat from "./src/Routes/chatbot.js";
-// import UploadFile from "./src/Routes/uploadefileRoutes.js";
-
-// dotenv.config(); // Load env variables early
-
-// const app = express();
-// const PORT = process.env.PORT || 9000;
-
-// // Middleware 
-// app.use(cors());
-// app.use(express.json());
-// app.use(verifyToken);
-
-// // Routes
-// app.use('/', MotherId);
-// app.use('/', PregnancyRecord);
-// app.use('/', Chat);
-// app.use('/', UploadFile);
-
-// // Start the server
-// app.listen(PORT, async () => {
-//     await connectDB();
-//     console.log(`✅ Server is running on http://localhost:${PORT}`);
-// });
