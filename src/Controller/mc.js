@@ -1,6 +1,6 @@
 import Mother from "../Model/mm.js";
 import bcrypt from "bcrypt";
-import { JwtToken } from "../Utils/jwtToken.js";
+import { JwtToken } from "../Utils/jt.js";
 
 export const registerMother = async (req, res) => {
   try {
