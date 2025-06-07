@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import connectDB from './DB/db.js';
+import connectDB from './db/db.js';
 import cors from 'cors';
 
 import MotherId from "./Routes/motherRoutes.js"
