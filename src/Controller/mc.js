@@ -2,6 +2,9 @@ import Mother from "../Model/mm.js";
 import bcrypt from "bcrypt";
 import { JwtToken } from "../Utils/jt.js";
 
+import dotenv from "dotenv"
+dotenv.config();
+
 export const registerMother = async (req, res) => {
   try {
     const { name, motherId, email, mobilenumber, password, conformpassword } =

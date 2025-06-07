@@ -3,6 +3,9 @@ import Mother from "../Model/mm.js";
 import PregnancyRecord from "../Model/prm.js";
 import ChatHistory from "../Model/chm.js";
 
+import dotenv from "dotenv"
+dotenv.config();
+
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // Symptom urgency mapping

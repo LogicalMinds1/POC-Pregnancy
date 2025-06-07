@@ -1,5 +1,5 @@
 import express from 'express';
-import dotenv from 'dotenv';
+
 import connectDB from './src/db.js';
 import cors from 'cors';
 
@@ -9,15 +9,18 @@ import { verifyToken } from "./src/Middleware/authMiddleware.js";
 import PregnancyRecord from './src/Routes/pre.js';
 import Chat from "./src/Routes/Chatbot.js"
 import UploadFile from "./src/Routes/up.js"
+import dotenv from "dotenv"
+dotenv.config();
+
 
 const app = express();
-const PORT =  process.env.PORT || 9000;
+const PORT =  process.env.PORT || 8000;
 
 // Middleware 
 app.use(cors());
 app.use(express.json());
 app.use(verifyToken);
-dotenv.config();
+
 
 
 //Routes
