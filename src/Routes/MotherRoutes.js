@@ -1,5 +1,5 @@
 import express from "express";
-import { registerMother, loginMother } from "../Controller/MotherController.js";
+import { registerMother, loginMother } from "../Controller/motherController.js";
 
 const router = express.Router();
 
