@@ -1,5 +1,5 @@
 // controllers/pregnancyController.js
-import PregnancyRecord from "../Model/PregnancyRecordModel.js";
+import PregnancyRecord from "../Model/pregnancyRecordModel.js";
 
 import fetch from "node-fetch"; 
 

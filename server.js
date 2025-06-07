@@ -1,14 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import connectDB from './src/DB/db.js';
+import connectDB from './DB/db.js';
 import cors from 'cors';
 
-import MotherId from "./src/Routes/motherRoutes.js"
-import { verifyToken } from "./src/Middleware/authMiddleware.js";
+import MotherId from "./Routes/motherRoutes.js"
+import { verifyToken } from "./Middleware/authMiddleware.js";
 
-import PregnancyRecord from './src/Controller/pregnancyController.js';
-import Chat from "./src/Routes/chatbot.js"
-import UploadFile from "./src/Routes/uploadefileRoutes.js"
+import PregnancyRecord from '/Controller/pregnancyController.js';
+import Chat from "./Routes/chatbot.js"
+import UploadFile from "./Routes/uploadefileRoutes.js"
 
 const app = express();
 const PORT =  process.env.PORT || 9000;

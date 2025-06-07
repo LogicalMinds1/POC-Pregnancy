@@ -1,7 +1,7 @@
 import { OpenAI } from "openai";
-import Mother from "../Model/MotherModel.js";
-import PregnancyRecord from "../Model/PregnancyRecordModel.js";
-import ChatHistory from "../Model/ChatHistoryModel.js";
+import Mother from "../Model/motherModel.js";
+import PregnancyRecord from "../Model/pregnancyRecordModel.js";
+import ChatHistory from "../Model/chatHistoryModel.js";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
