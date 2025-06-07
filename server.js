@@ -6,9 +6,9 @@ import cors from 'cors';
 import MotherId from "./src/Routes/mo.js"
 import { verifyToken } from "./src/Middleware/authMiddleware.js";
 
-import PregnancyRecord from './src/Routes/pregnancyRoutes.js';
+import PregnancyRecord from './src/Routes/pre.js';
 import Chat from "./src/Routes/Chatbot.js"
-import UploadFile from "./src/Routes/uploadefileRoutes.js"
+import UploadFile from "./src/Routes/up.js"
 
 const app = express();
 const PORT =  process.env.PORT || 9000;
