@@ -3,12 +3,12 @@ import dotenv from 'dotenv';
 import connectDB from './src/db.js';
 import cors from 'cors';
 
-import MotherId from "./src/Routes/MotherRoutes.js"
+import MotherId from "./src/Routes/motherRoutes.js"
 import { verifyToken } from "./src/Middleware/authMiddleware.js";
 
 import PregnancyRecord from './src/Routes/pregnancyRoutes.js';
-import Chat from "./src/Routes/Chatbot.js"
-import UploadFile from "./src/Routes/UploadefileRoutes.js"
+import Chat from "./src/Routes/chatbot.js"
+import UploadFile from "./src/Routes/uploadefileRoutes.js"
 
 const app = express();
 const PORT =  process.env.PORT || 9000;
