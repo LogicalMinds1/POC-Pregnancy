@@ -1,6 +1,6 @@
 // src/Routes/chatRoutes.js
 import express from "express";
-import { handleChat,getChatHistory } from "../Controller/chatController.js";
+import { handleChat,getChatHistory } from "../Controller/chc.js";
 
 const router = express.Router();
 

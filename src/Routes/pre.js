@@ -1,6 +1,6 @@
 // routes/pregnancyRoutes.js
 import express from "express";
-import { createPregnancyRecord, predectlevel, saveAndPredict } from "../Controller/pregnancyController.js";
+import { createPregnancyRecord, predectlevel, saveAndPredict } from "../Controller/pc.js";
 
 const router = express.Router();
 
