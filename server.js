@@ -2,7 +2,7 @@ import express from 'express';
 
 import connectDB from './src/db.js';
 import cors from 'cors';
-
+import { createProxyMiddleware } from 'http-proxy-middleware';
 import MotherId from "./src/Routes/mo.js"
 import { verifyToken } from "./src/Middleware/authMiddleware.js";
 
@@ -31,6 +31,13 @@ app.use('/', PregnancyRecord);
 app.use('/', Chat);
 app.use('/', UploadFile);
 
+
+app.use('/n8n-proxy', createProxyMiddleware({
+  target: 'https://n8n.srv795087.hstgr.cloud',
+  changeOrigin: true,
+  pathRewrite: {'^/n8n-proxy' : ''},
+  secure: false // Bypass SSL validation (temporary)
+}));
 // Start the server
 app.listen(PORT, async () => {
     await connectDB();
