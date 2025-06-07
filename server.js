@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import connectDB from './src/db.js';
 import cors from 'cors';
 
-import MotherId from "./src/Routes/motherRoutes.js"
+// import MotherId from "./src/Routes/motherRoutes.js"
 import { verifyToken } from "./src/Middleware/authMiddleware.js";
 
 import PregnancyRecord from './src/Routes/pregnancyRoutes.js';
@@ -21,7 +21,7 @@ dotenv.config();
 
 
 //Routes
-app.use('/', MotherId);
+// app.use('/', MotherId);
 app.use('/', PregnancyRecord);
 app.use('/', Chat);
 app.use('/', UploadFile);
