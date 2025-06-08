@@ -11,8 +11,8 @@ dotenv.config();
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
-
-const webhookUploadUrl = process.env.WEBHOOK_UPLOAD_URL;
+const webhookUploadUrl =  "https://nutrition-j04e.onrender.com/trigger-n8n"
+//const webhookUploadUrl = process.env.WEBHOOK_UPLOAD_URL;
 const webhookRiskAlertUrl = process.env.WEBHOOK_RISK_ALERT_URL;
 const fastApiUrl = process.env.FASTAPI_PREDICT_URL;
 
