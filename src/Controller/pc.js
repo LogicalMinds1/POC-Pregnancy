@@ -612,7 +612,8 @@ export const saveAndPredict = async (req, res) => {
     return res.status(500).json({
       success: false,
       message: "Internal server error",
-      ...(process.env.NODE_ENV === "development" && { details: error.stack }),
+      error:error.message
+      // ...(process.env.NODE_ENV === "development" && { details: error.stack }),
     });
   }
 };
